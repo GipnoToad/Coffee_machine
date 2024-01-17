@@ -77,5 +77,16 @@ class CoffeeMachine:
                 elif not beans:
                     print("Ask the administrator for help")
                     return False
+            elif int(coffee_name) in list(range(1, len(self.menu) + 1)):
+                for i, item in enumerate(self.menu, start=1):
+                    if coffee_name == str(i):
+                        beans = self.check_beans_stock(coffee_name)
+                        milk = self.check_milk_stock(coffee_name)
+                        if beans and milk:
+                            print("Nice choose!")
+                            return item
+                        elif not beans:
+                            print("Ask the administrator for help")
+                            return False
             else:
                 print("There is no such coffee yet. Please try again.")
