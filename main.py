@@ -10,7 +10,7 @@ class Main:
 
     espresso = Coffee("Espresso", 2.5, 20, 0)
     latte = Coffee("Latte", 3.5, 15, 10)
-    americano = Coffee("Americano", 5.5, 18, 15)
+    americano = Coffee("Americano", 5.5, 18, 0)
 
     admin.add_coffee(espresso)
     admin.add_coffee(latte)
